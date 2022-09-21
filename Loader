@@ -1,1 +1,368 @@
 
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local HexHubV1Loader = Instance.new("ScreenGui")
+local LoaderSplash = Instance.new("Frame")
+local UIGradient = Instance.new("UIGradient")
+local UICorner = Instance.new("UICorner")
+local HexHubLogo = Instance.new("ImageLabel")
+local Title = Instance.new("TextLabel")
+local Versiontext = Instance.new("TextLabel")
+local LoadingText = Instance.new("TextLabel")
+local LoadingSpinner = Instance.new("ImageLabel")
+local LoaderInfo = Instance.new("Frame")
+local UIGradient_2 = Instance.new("UIGradient")
+local UICorner_2 = Instance.new("UICorner")
+local HexHubLogo_2 = Instance.new("ImageLabel")
+local Title_2 = Instance.new("TextLabel")
+local LoadButton = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local UIGradient_3 = Instance.new("UIGradient")
+local Title_3 = Instance.new("TextLabel")
+local Update1 = Instance.new("TextLabel")
+local Version = Instance.new("TextLabel")
+local UpdatesText = Instance.new("TextLabel")
+local DiscordUpdateLog = Instance.new("TextLabel")
+local CreditText = Instance.new("TextLabel")
+local OliverCred = Instance.new("TextLabel")
+local HexerCred = Instance.new("TextLabel")
+local Divider3 = Instance.new("Frame")
+local Executorname = Instance.new("TextLabel")
+local GameName = Instance.new("TextLabel")
+local Divider2 = Instance.new("Frame")
+local Divider1 = Instance.new("Frame")
+
+--Properties:
+
+HexHubV1Loader.Name = "HexHubV1Loader"
+HexHubV1Loader.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+HexHubV1Loader.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+LoaderSplash.Name = "LoaderSplash"
+LoaderSplash.Parent = HexHubV1Loader
+LoaderSplash.AnchorPoint = Vector2.new(0.5, 0.5)
+LoaderSplash.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LoaderSplash.BorderColor3 = Color3.fromRGB(27, 42, 53)
+LoaderSplash.BorderSizePixel = 0
+LoaderSplash.Position = UDim2.new(0.520891964, 0, 0.499304891, 0)
+LoaderSplash.Size = UDim2.new(0, 293, 0, 138)
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(102, 45, 113)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(197, 66, 110))}
+UIGradient.Parent = LoaderSplash
+
+UICorner.CornerRadius = UDim.new(0, 9)
+UICorner.Parent = LoaderSplash
+
+HexHubLogo.Name = "HexHubLogo"
+HexHubLogo.Parent = LoaderSplash
+HexHubLogo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+HexHubLogo.BackgroundTransparency = 1.000
+HexHubLogo.Position = UDim2.new(0.0437878296, 0, 0.102530219, 0)
+HexHubLogo.Size = UDim2.new(0, 81, 0, 109)
+HexHubLogo.Image = "rbxassetid://9460077691"
+HexHubLogo.ScaleType = Enum.ScaleType.Crop
+
+Title.Name = "Title"
+Title.Parent = LoaderSplash
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.Position = UDim2.new(0.406112731, 0, 0.0682479218, 0)
+Title.Size = UDim2.new(0, 133, 0, 43)
+Title.Font = Enum.Font.FredokaOne
+Title.Text = "Hexhub"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextStrokeColor3 = Color3.fromRGB(170, 85, 255)
+Title.TextStrokeTransparency = 0.000
+Title.TextWrapped = true
+
+Versiontext.Name = "Versiontext"
+Versiontext.Parent = LoaderSplash
+Versiontext.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Versiontext.BackgroundTransparency = 1.000
+Versiontext.Position = UDim2.new(0.252529114, 0, 0.437813163, 0)
+Versiontext.Size = UDim2.new(0, 200, 0, 23)
+Versiontext.Font = Enum.Font.FredokaOne
+Versiontext.Text = "Version 1.6"
+Versiontext.TextColor3 = Color3.fromRGB(255, 255, 255)
+Versiontext.TextScaled = true
+Versiontext.TextSize = 14.000
+Versiontext.TextStrokeColor3 = Color3.fromRGB(170, 85, 255)
+Versiontext.TextStrokeTransparency = 0.000
+Versiontext.TextWrapped = true
+
+LoadingText.Name = "LoadingText"
+LoadingText.Parent = LoaderSplash
+LoadingText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LoadingText.BackgroundTransparency = 1.000
+LoadingText.Position = UDim2.new(0.406112731, 0, 0.640711665, 0)
+LoadingText.Size = UDim2.new(0, 99, 0, 34)
+LoadingText.Font = Enum.Font.FredokaOne
+LoadingText.Text = "Loading"
+LoadingText.TextColor3 = Color3.fromRGB(255, 255, 255)
+LoadingText.TextScaled = true
+LoadingText.TextSize = 14.000
+LoadingText.TextStrokeColor3 = Color3.fromRGB(170, 85, 255)
+LoadingText.TextStrokeTransparency = 0.000
+LoadingText.TextWrapped = true
+
+LoadingSpinner.Name = "LoadingSpinner"
+LoadingSpinner.Parent = LoaderSplash
+LoadingSpinner.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LoadingSpinner.BackgroundTransparency = 1.000
+LoadingSpinner.Position = UDim2.new(0.770750284, 0, 0.609776616, 0)
+LoadingSpinner.Size = UDim2.new(0, 41, 0, 41)
+LoadingSpinner.Image = "rbxassetid://9460352469"
+LoadingSpinner.ScaleType = Enum.ScaleType.Crop
+
+LoaderInfo.Name = "LoaderInfo"
+LoaderInfo.Parent = HexHubV1Loader
+LoaderInfo.AnchorPoint = Vector2.new(0.5, 0.5)
+LoaderInfo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LoaderInfo.BorderColor3 = Color3.fromRGB(27, 42, 53)
+LoaderInfo.BorderSizePixel = 0
+LoaderInfo.Position = UDim2.new(0.520200372, 0, 0.486280024, 0)
+LoaderInfo.Size = UDim2.new(0, 526, 0, 437)
+LoaderInfo.Visible = false
+
+UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(102, 45, 113)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(197, 66, 110))}
+UIGradient_2.Parent = LoaderInfo
+
+UICorner_2.CornerRadius = UDim.new(0, 9)
+UICorner_2.Parent = LoaderInfo
+
+HexHubLogo_2.Name = "HexHubLogo"
+HexHubLogo_2.Parent = LoaderInfo
+HexHubLogo_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+HexHubLogo_2.BackgroundTransparency = 1.000
+HexHubLogo_2.Position = UDim2.new(-0.0018395253, 0, -0.000444599922, 0)
+HexHubLogo_2.Size = UDim2.new(0, 38, 0, 38)
+HexHubLogo_2.Image = "rbxassetid://9460077691"
+HexHubLogo_2.ScaleType = Enum.ScaleType.Crop
+
+Title_2.Name = "Title"
+Title_2.Parent = LoaderInfo
+Title_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.BackgroundTransparency = 1.000
+Title_2.Position = UDim2.new(0.328165948, 0, 0.00646302244, 0)
+Title_2.Size = UDim2.new(0, 179, 0, 41)
+Title_2.Font = Enum.Font.FredokaOne
+Title_2.Text = "HexHub"
+Title_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.TextScaled = true
+Title_2.TextSize = 14.000
+Title_2.TextStrokeColor3 = Color3.fromRGB(170, 85, 255)
+Title_2.TextStrokeTransparency = 0.000
+Title_2.TextWrapped = true
+
+LoadButton.Name = "LoadButton"
+LoadButton.Parent = LoaderInfo
+LoadButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LoadButton.Position = UDim2.new(0.307984799, 0, 0.851258576, 0)
+LoadButton.Size = UDim2.new(0, 200, 0, 50)
+LoadButton.Font = Enum.Font.FredokaOne
+LoadButton.Text = " "
+LoadButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+LoadButton.TextSize = 32.000
+LoadButton.TextStrokeColor3 = Color3.fromRGB(170, 85, 255)
+LoadButton.TextStrokeTransparency = 0.000
+LoadButton.TextWrapped = true
+LoadButton.MouseButton1Down:Connect(function()
+	--idk yet coming soon Ig?
+end)
+
+UICorner_3.CornerRadius = UDim.new(0, 9)
+UICorner_3.Parent = LoadButton
+
+UIGradient_3.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(55, 206, 223)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(91, 136, 229))}
+UIGradient_3.Parent = LoadButton
+
+Title_3.Name = "Title"
+Title_3.Parent = LoadButton
+Title_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_3.BackgroundTransparency = 1.000
+Title_3.Position = UDim2.new(0.0581659377, 0, 0.0864630193, 0)
+Title_3.Size = UDim2.new(0, 179, 0, 41)
+Title_3.Font = Enum.Font.FredokaOne
+Title_3.Text = "Load HexHub V1"
+Title_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_3.TextScaled = true
+Title_3.TextSize = 14.000
+Title_3.TextStrokeColor3 = Color3.fromRGB(170, 85, 255)
+Title_3.TextStrokeTransparency = 0.000
+Title_3.TextWrapped = true
+
+Update1.Name = "Update1"
+Update1.Parent = LoaderInfo
+Update1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Update1.BackgroundTransparency = 1.000
+Update1.Position = UDim2.new(0.0334891565, 0, 0.269620925, 0)
+Update1.Size = UDim2.new(0, 491, 0, 35)
+Update1.Font = Enum.Font.FredokaOne
+Update1.Text = "[+] Fixed Loader "
+Update1.TextColor3 = Color3.fromRGB(255, 255, 255)
+Update1.TextScaled = true
+Update1.TextSize = 14.000
+Update1.TextStrokeColor3 = Color3.fromRGB(170, 85, 255)
+Update1.TextStrokeTransparency = 0.000
+Update1.TextWrapped = true
+
+Version.Name = "Version"
+Version.Parent = LoaderInfo
+Version.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Version.BackgroundTransparency = 1.000
+Version.Position = UDim2.new(0.328165948, 0, 0.084266223, 0)
+Version.Size = UDim2.new(0, 179, 0, 25)
+Version.Font = Enum.Font.FredokaOne
+Version.Text = "Version 1.6"
+Version.TextColor3 = Color3.fromRGB(255, 255, 255)
+Version.TextScaled = true
+Version.TextSize = 14.000
+Version.TextStrokeColor3 = Color3.fromRGB(170, 85, 255)
+Version.TextStrokeTransparency = 0.000
+Version.TextWrapped = true
+
+UpdatesText.Name = "UpdatesText"
+UpdatesText.Parent = LoaderInfo
+UpdatesText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+UpdatesText.BackgroundTransparency = 1.000
+UpdatesText.Position = UDim2.new(0.0334891565, 0, 0.164357767, 0)
+UpdatesText.Size = UDim2.new(0, 491, 0, 40)
+UpdatesText.Font = Enum.Font.FredokaOne
+UpdatesText.Text = "Updates:"
+UpdatesText.TextColor3 = Color3.fromRGB(255, 255, 255)
+UpdatesText.TextScaled = true
+UpdatesText.TextSize = 14.000
+UpdatesText.TextStrokeColor3 = Color3.fromRGB(170, 85, 255)
+UpdatesText.TextStrokeTransparency = 0.000
+UpdatesText.TextWrapped = true
+
+DiscordUpdateLog.Name = "DiscordUpdateLog"
+DiscordUpdateLog.Parent = LoaderInfo
+DiscordUpdateLog.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DiscordUpdateLog.BackgroundTransparency = 1.000
+DiscordUpdateLog.Position = UDim2.new(0.0334891565, 0, 0.349712461, 0)
+DiscordUpdateLog.Size = UDim2.new(0, 491, 0, 35)
+DiscordUpdateLog.Font = Enum.Font.FredokaOne
+DiscordUpdateLog.Text = "[~] More Updates On the Discord Server!"
+DiscordUpdateLog.TextColor3 = Color3.fromRGB(255, 255, 255)
+DiscordUpdateLog.TextScaled = true
+DiscordUpdateLog.TextSize = 14.000
+DiscordUpdateLog.TextStrokeColor3 = Color3.fromRGB(170, 85, 255)
+DiscordUpdateLog.TextStrokeTransparency = 0.000
+DiscordUpdateLog.TextWrapped = true
+
+CreditText.Name = "CreditText"
+CreditText.Parent = LoaderInfo
+CreditText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CreditText.BackgroundTransparency = 1.000
+CreditText.Position = UDim2.new(0.0334891565, 0, 0.452687263, 0)
+CreditText.Size = UDim2.new(0, 491, 0, 40)
+CreditText.Font = Enum.Font.FredokaOne
+CreditText.Text = "Credit:"
+CreditText.TextColor3 = Color3.fromRGB(255, 255, 255)
+CreditText.TextScaled = true
+CreditText.TextSize = 14.000
+CreditText.TextStrokeColor3 = Color3.fromRGB(170, 85, 255)
+CreditText.TextStrokeTransparency = 0.000
+CreditText.TextWrapped = true
+
+OliverCred.Name = "OliverCred"
+OliverCred.Parent = LoaderInfo
+OliverCred.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+OliverCred.BackgroundTransparency = 1.000
+OliverCred.Position = UDim2.new(0.0315880142, 0, 0.541932106, 0)
+OliverCred.Size = UDim2.new(0, 491, 0, 29)
+OliverCred.Font = Enum.Font.FredokaOne
+OliverCred.Text = "StealthyOliver#6613"
+OliverCred.TextColor3 = Color3.fromRGB(255, 255, 255)
+OliverCred.TextScaled = true
+OliverCred.TextSize = 14.000
+OliverCred.TextStrokeColor3 = Color3.fromRGB(170, 85, 255)
+OliverCred.TextStrokeTransparency = 0.000
+OliverCred.TextWrapped = true
+
+HexerCred.Name = "HexerCred"
+HexerCred.Parent = LoaderInfo
+HexerCred.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+HexerCred.BackgroundTransparency = 1.000
+HexerCred.Position = UDim2.new(0.0315880142, 0, 0.608293653, 0)
+HexerCred.Size = UDim2.new(0, 491, 0, 29)
+HexerCred.Font = Enum.Font.FredokaOne
+HexerCred.Text = "HexerMaster1929"
+HexerCred.TextColor3 = Color3.fromRGB(255, 255, 255)
+HexerCred.TextScaled = true
+HexerCred.TextSize = 14.000
+HexerCred.TextStrokeColor3 = Color3.fromRGB(170, 85, 255)
+HexerCred.TextStrokeTransparency = 0.000
+HexerCred.TextWrapped = true
+
+Divider3.Name = "Divider3"
+Divider3.Parent = LoaderInfo
+Divider3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Divider3.BorderSizePixel = 0
+Divider3.Position = UDim2.new(0.0133079849, 0, 0.695652187, 0)
+Divider3.Size = UDim2.new(0, 509, 0, 2)
+
+Executorname.Name = "Executorname"
+Executorname.Parent = LoaderInfo
+Executorname.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Executorname.BackgroundTransparency = 1.000
+Executorname.Position = UDim2.new(0.309885949, 0, 0.71813345, 0)
+Executorname.Size = UDim2.new(0, 200, 0, 29)
+Executorname.Font = Enum.Font.FredokaOne
+Executorname.Text = getexecutorname() or identifyexecutor()
+Executorname.TextColor3 = Color3.fromRGB(255, 255, 255)
+Executorname.TextScaled = true
+Executorname.TextSize = 14.000
+Executorname.TextStrokeColor3 = Color3.fromRGB(170, 85, 255)
+Executorname.TextStrokeTransparency = 0.000
+Executorname.TextWrapped = true
+
+GameName.Name = "GameName"
+GameName.Parent = LoaderInfo
+GameName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GameName.BackgroundTransparency = 1.000
+GameName.Position = UDim2.new(0.309885949, 0, 0.784494996, 0)
+GameName.Size = UDim2.new(0, 200, 0, 29)
+GameName.Font = Enum.Font.FredokaOne
+GameName.Text = game.Name
+GameName.TextColor3 = Color3.fromRGB(255, 255, 255)
+GameName.TextScaled = true
+GameName.TextSize = 14.000
+GameName.TextStrokeColor3 = Color3.fromRGB(170, 85, 255)
+GameName.TextStrokeTransparency = 0.000
+GameName.TextWrapped = true
+
+Divider2.Name = "Divider2"
+Divider2.Parent = LoaderInfo
+Divider2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Divider2.BorderSizePixel = 0
+Divider2.Position = UDim2.new(0.0152091254, 0, 0.446224272, 0)
+Divider2.Size = UDim2.new(0, 509, 0, 2)
+
+Divider1.Name = "Divider1"
+Divider1.Parent = LoaderInfo
+Divider1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Divider1.BorderSizePixel = 0
+Divider1.Position = UDim2.new(0.0152091254, 0, 0.15789476, 0)
+Divider1.Size = UDim2.new(0, 509, 0, 2)
+
+-- Scripts:
+
+while wait() do
+		LoadingSpinner.Rotation = script.Parent.Rotation + 5
+		if LoadingSpinner.Rotation == 360 then
+			LoadingSpinner.Rotation = 0
+		end
+	end
+
+wait(7)
+
+LoaderSplash.Visible = false
+wait(.5)
+LoaderInfo.Visible = true
