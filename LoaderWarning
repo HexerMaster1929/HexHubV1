@@ -1,0 +1,116 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local HexHubDiscontinued = Instance.new("ScreenGui")
+local MainBackround = Instance.new("ImageLabel")
+local UICorner = Instance.new("UICorner")
+local HexHubLogo = Instance.new("ImageLabel")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextLabel_3 = Instance.new("TextLabel")
+local CloseBTN = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local Continue = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+
+--Properties:
+
+HexHubDiscontinued.Name = "HexHubDiscontinued"
+HexHubDiscontinued.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+HexHubDiscontinued.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+MainBackround.Name = "MainBackround"
+MainBackround.Parent = HexHubDiscontinued
+MainBackround.BackgroundColor3 = Color3.fromRGB(170, 170, 255)
+MainBackround.Position = UDim2.new(0.30224508, 0, 0.0875814185, 0)
+MainBackround.Size = UDim2.new(0, 574, 0, 504)
+MainBackround.Image = "rbxassetid://0"
+MainBackround.ScaleType = Enum.ScaleType.Crop
+
+UICorner.CornerRadius = UDim.new(0.100000001, 10)
+UICorner.Parent = MainBackround
+
+HexHubLogo.Name = "HexHubLogo"
+HexHubLogo.Parent = MainBackround
+HexHubLogo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+HexHubLogo.BackgroundTransparency = 1.000
+HexHubLogo.Position = UDim2.new(0.209059238, 0, -0.0732204467, 0)
+HexHubLogo.Size = UDim2.new(0, 334, 0, 248)
+HexHubLogo.Image = "rbxassetid://8542338946"
+
+TextLabel.Parent = MainBackround
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.0331010446, 0, 0.287698418, 0)
+TextLabel.Size = UDim2.new(0, 536, 0, 60)
+TextLabel.Font = Enum.Font.Nunito
+TextLabel.Text = "WARNING"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+TextLabel_2.Parent = MainBackround
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0.0331010446, 0, 0.418650806, 0)
+TextLabel_2.Size = UDim2.new(0, 536, 0, 177)
+TextLabel_2.Font = Enum.Font.Nunito
+TextLabel_2.Text = "HexHub V1 Will Be Discontinued Soon! Would You Like To Continue?"
+TextLabel_2.TextColor3 = Color3.fromRGB(170, 0, 0)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+TextLabel_3.Parent = MainBackround
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.Position = UDim2.new(0.0331010446, 0, 0.787698507, 0)
+TextLabel_3.Size = UDim2.new(0, 536, 0, 40)
+TextLabel_3.Font = Enum.Font.Nunito
+TextLabel_3.Text = "You may use HexHub V1, However The option to continue will be removed When HexHub V1 Is discontinued."
+TextLabel_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 14.000
+TextLabel_3.TextWrapped = true
+
+CloseBTN.Name = "CloseBTN"
+CloseBTN.Parent = MainBackround
+CloseBTN.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+CloseBTN.Position = UDim2.new(0.146341458, 0, 0.888888836, 0)
+CloseBTN.Size = UDim2.new(0, 154, 0, 47)
+CloseBTN.Font = Enum.Font.SourceSans
+CloseBTN.Text = "Close"
+CloseBTN.TextColor3 = Color3.fromRGB(255, 255, 255)
+CloseBTN.TextScaled = true
+CloseBTN.TextSize = 14.000
+CloseBTN.TextWrapped = true
+CloseBTN.MouseButton1Down:Connect(function()
+	HexHubDiscontinued:Destroy()
+end)
+
+
+UICorner_2.CornerRadius = UDim.new(0.100000001, 10)
+UICorner_2.Parent = CloseBTN
+
+Continue.Name = "Continue"
+Continue.Parent = MainBackround
+Continue.BackgroundColor3 = Color3.fromRGB(85, 255, 0)
+Continue.Position = UDim2.new(0.580139339, 0, 0.888888836, 0)
+Continue.Size = UDim2.new(0, 154, 0, 47)
+Continue.Font = Enum.Font.SourceSans
+Continue.Text = "Continue"
+Continue.TextColor3 = Color3.fromRGB(255, 255, 255)
+Continue.TextScaled = true
+Continue.TextSize = 14.000
+Continue.TextWrapped = true
+Continue.MouseButton1Down:Connect(function()
+	HexHubDiscontinued:Destroy()
+	loadstring(game:HttpGet(("https://raw.githubusercontent.com/HexerMaster1929/HexHubV1/main/Loader"), true))()
+
+end)
+
+UICorner_3.CornerRadius = UDim.new(0.100000001, 10)
+UICorner_3.Parent = Continue
