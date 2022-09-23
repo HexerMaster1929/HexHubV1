@@ -354,14 +354,7 @@ Divider1.Size = UDim2.new(0, 509, 0, 2)
 
 -- Scripts:
 
-while wait() do
-		LoadingSpinner.Rotation = script.Parent.Rotation + 5
-		if LoadingSpinner.Rotation == 360 then
-			LoadingSpinner.Rotation = 0
-		end
-	end
-
-wait(7)
+wait(13)
 
 LoaderSplash.Visible = false
 wait(.5)
